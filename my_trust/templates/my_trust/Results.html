@@ -20,7 +20,10 @@
 {% endif %}
 
 <p>
-Therefore, your total payoff is {{ player.payoff }}.
+Therefore, your total payoff is {{ player.payoff }}, which equals {{ player.payoff.to_real_world_currency(self.session) }}.
+</p>
+<p>
+    Your completion code is {{player.completion_code}}, which you
 </p>
 
     {% next_button %}

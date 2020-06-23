@@ -21,7 +21,7 @@ class Constants(BaseConstants):
     name_in_url = 'my_trust'
     players_per_group = 2
     num_rounds = 1
-
+    completion_code = '0293726'
     endowment = c(10)
     #multiplication_factor = 3
 
@@ -29,6 +29,10 @@ class Subsession(BaseSubsession):
     def creating_session(self):
         for g in self.get_groups():
             g.multiplication_factor = self.session.config['multiplication_factor']
+
+        # assign fixed completion code to player
+        for player in self.get_players():
+            player.completion_code = Constants.completion_code
 
 class Group(BaseGroup):
     multiplication_factor = models.IntegerField()
@@ -56,4 +60,4 @@ class Group(BaseGroup):
         p2.payoff = self.sent_amount * self.multiplication_factor - self.sent_back_amount
 
 class Player(BasePlayer):
-    pass
+    completion_code = models.StringField()
