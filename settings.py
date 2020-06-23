@@ -7,7 +7,7 @@ from os import environ
 
 mturk_hit_settings = {
     'keywords': ['financial', 'tax', 'study', 'academic'],
-    'title': 'Assess Corporate Tax Strategies ($1.05 for about 7 min)',
+    'title': 'Trust game (few minutes to complete, earn real money!)',
     'description': 'Assess corporate tax strategies of companies for $1.05 for about 7 minutes.',
     'frame_height': 500,
     #'preview_template': 'global/MTurkPreview.html',
