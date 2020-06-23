@@ -54,14 +54,14 @@ SESSION_CONFIGS = [
        name='trust_game_low',
        display_name="Trust game low",
        num_demo_participants=2,
-       app_sequence=['my_trust', 'payment_info'],
+       app_sequence=['my_trust'],
        multiplication_factor=3
     ),
     dict(
         name='trust_game_high',
         display_name="Trust game high",
         num_demo_participants=2,
-        app_sequence=['my_trust', 'payment_info'],
+        app_sequence=['my_trust'],
         multiplication_factor=4
     ),
 ]
